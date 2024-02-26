@@ -1,5 +1,10 @@
 // Function to setup input from stdin
-const setupInput = function () {
+
+let connection;
+
+
+const setupInput = (conn) => {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
